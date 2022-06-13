@@ -49,7 +49,7 @@ const UserModal = ({
     } catch (error: any) {
       setErrorMsg({
         success: "",
-        error: "Something went wrong while updating user... ",
+        error: error.response.data.message,
       });
       setLoading(false);
     }
@@ -68,7 +68,7 @@ const UserModal = ({
     } catch (error: any) {
       setErrorMsg({
         success: "",
-        error: "Something went wrong while updating user... ",
+        error: error.response.data.message,
       });
       setLoading(false);
     }
@@ -85,7 +85,7 @@ const UserModal = ({
       } catch (error: any) {
         setErrorMsg({
           success: "",
-          error: "Could not fetch users" + error.message,
+          error: error.response.data.message,
         });
         setLoading(false);
       }
@@ -119,6 +119,7 @@ const UserModal = ({
                         name='email'
                         placeholder='email'
                         onChange={inputHandler}
+                        value={user?.email}
                         required
                       ></input>
                       <label htmlFor='email'>email</label>
