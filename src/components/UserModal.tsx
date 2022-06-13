@@ -17,7 +17,7 @@ const UserModal = ({
   setRender: Function;
 }) => {
   ////////////////// Hooks
-  const token = useAppSelector<any>(selectToken); //////////////////////////////////// TODO: Fix Type
+  const token = useAppSelector(selectToken);
   const [user, setUser] = useState<Iuser>();
   const [edit, setEdit] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<IerrorMsg>();
@@ -119,7 +119,6 @@ const UserModal = ({
                         name='email'
                         placeholder='email'
                         onChange={inputHandler}
-                        value={user?.email}
                         required
                       ></input>
                       <label htmlFor='email'>email</label>
@@ -131,7 +130,7 @@ const UserModal = ({
                         name='password'
                         placeholder='password'
                         onChange={inputHandler}
-                        minLength={5}
+                        minLength={4}
                         required
                       ></input>
                       <label htmlFor='password'>password</label>
@@ -143,7 +142,7 @@ const UserModal = ({
                         name='name'
                         placeholder='Name'
                         onChange={inputHandler}
-                        minLength={5}
+                        minLength={4}
                         required
                       ></input>
                       <label htmlFor='name'>Name</label>
@@ -155,7 +154,7 @@ const UserModal = ({
                         name='surname'
                         placeholder='Surname'
                         onChange={inputHandler}
-                        minLength={5}
+                        minLength={2}
                         required
                       ></input>
                       <label htmlFor='surname'>Surname</label>
@@ -167,7 +166,7 @@ const UserModal = ({
                         name='id'
                         placeholder='Id'
                         onChange={inputHandler}
-                        minLength={5}
+                        minLength={2}
                         required
                       ></input>
                       <label htmlFor='id'>Id</label>
