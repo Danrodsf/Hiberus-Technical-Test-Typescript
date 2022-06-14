@@ -30,8 +30,6 @@ Los inputs tienen una simple validación de datos tipo required y minLength. Per
 
 Adicionalmente, no he empleado los scripts de bootstrap para validación de inputs ni para el modal, evitando así en la medida de lo posible la utilización de JS Vanilla y, por lo tanto, mantener el proyecto lo más cercano a uso nativo de React.
 
-He decidido no usar ningun metodo de persistencia de datos porque la aplicacion no lo requiere.
-
 Al realizar el deploy de la web, me surgió un error en el que el explorador me bloqueaba las llamadas a la API indicándome que la web tenía un problema de contenido mixto, tras investigar un poco, entendí que se daba porque aws amplify posee un certificado ssl, y la api no lo posee, por lo que generaba un contenido mixto tipo http/https que resulta no ser seguro. Por lo que la solución fue agregar un proxy gratiuto con ssl a la url de la API.
 
 Como última nota, he observado que el Endpoint de login devuelve el refreshToken, pero no existe un Endpoint para el empleo del mismo. Me gustaría acotarlo para que quizás lo implementen para futuros aplicantes.
@@ -58,6 +56,8 @@ El FrontEnd está compuesto por 5 vistas
 ● CRUD completo sobre usuarios
 ● Obtención y envió por cabecera tipo Bearer del JWT para acceder a los endpoints protegidos.
 ● Uso de Redux para guardar el JWT en un estado global y de ese modo, proteger el acceso a usuarios no registrados o logueados.
+● Uso de Local Storage para la persistencia del JWT y de ese modo no tener que solicitar el inicio de sesión tras una recarga o abandono del sitio web.
+● Implementación de un componente Logout para cerrar sesion y limpiar el JWT del Local Storage.
 ● Uso de Bootstrap para una maquetación más rápida y eficaz, además de ser 100% Responsive.
 ● Control de acceso a rutas desconocidas mediante la vista Error404.
 ● Uso de componente Spinner para mostrar un preloader cuando los datos están siendo obtenidos desde la API.
