@@ -10,7 +10,7 @@ Daniel Rodriguez
   <p>
     Prueba técnica de FrontEnd para Hiberus.
     <br />
-    <a href="https://main.d23ehxb0by6s7z.amplifyapp.com/">https://main.d79jbmd9coq6d.amplifyapp.com/</a>
+    <a href="https://main.d23ehxb0by6s7z.amplifyapp.com//">https://main.d79jbmd9coq6d.amplifyapp.com/</a>
     <br />
     <a href="https://github.com/Danrodsf/Technical-Test-Hiberus/issues">Reportar un Error</a>
   </p>
